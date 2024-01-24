@@ -7,34 +7,47 @@ module.exports = {
   },
   theme: {
     fontFamily: {
-      // FIXME: Add the real project font families, which are imported in the "fonts.css" file,
-      // and give them the human-readable names
-      sans: ['', ...defaultTheme.fontFamily.sans],
-      // FIXME: Remove the "mono" font family, if it is not used in the project
-      mono: ['', ...defaultTheme.fontFamily.mono],
+      sans: ['Inter', 'Inter Fallback', ...defaultTheme.fontFamily.sans],
+      title: ['Aeonik', 'Aeonik Fallback', ...defaultTheme.fontFamily.sans],
     },
     colors: ({ colors }) => ({
       inherit: colors.inherit,
       current: colors.current,
       transparent: colors.transparent,
-      // FIXME: Add colors which are used in the project. Make sure that they are prepared
-      // in the Figma and followed the naming "primary/secondary/gray-${number}"
-      // Example of correctly prepared colors in Figma — https://user-images.githubusercontent.com/20713191/143586876-5e834233-9639-4166-9811-b00e63820d98.png
-      black: '',
-      white: '',
+      black: '#0A0812',
+      white: '#FFFFFF',
+      red: '#F04242',
       primary: {
-        1: '',
+        blue: '#243BB9',
+        green: '#4DB29A',
+        pink: '#BE6AA7',
+        orange: '#D8A87C',
       },
       secondary: {
-        1: '',
+        blue: '#3F57DA',
       },
-      gray: {
-        1: '',
+      grey: {
+        100: '#EFF1F6',
+        200: '#BDC4D1',
+      },
+      blue: {
+        100: '#3D79F5',
+        200: '#0054FF',
+        400: '#172136',
       },
     }),
-    // FIXME: Check if the breakpoints ("screens") are correct for the project
+    extend: {
+      borderRadius: {
+        large: '40px',
+      },
+      letterSpacing: {
+        'tight-8': '-0.02em',
+        'tight-4': '-0.01em',
+      },
+    },
     screens: {
-      xl: { max: '1439px' },
+      '2xl': { max: '1920px' },
+      xl: { max: '1490px' },
       lg: { max: '1279px' },
       md: { max: '1023px' },
       sm: { max: '767px' },
@@ -42,5 +55,6 @@ module.exports = {
       '2xs': { max: '413px' },
     },
   },
+  // eslint-disable-next-line global-require
   plugins: [require('tailwindcss-safe-area')],
 };

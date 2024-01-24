@@ -18,7 +18,7 @@ const Burger = ({ className = null, isToggled, onClick }) => (
       <div className="absolute -inset-5" aria-hidden />
       <span className="relative block h-7 w-7">
         <m.span
-          className="absolute right-0 top-1 block h-0.5 w-7 rounded-full bg-[#000] transition-colors duration-200"
+          className="absolute right-0 top-1 block h-0.5 w-7 rounded-full bg-white transition-colors duration-200"
           variants={{
             initial: {
               top: 4,
@@ -33,7 +33,7 @@ const Burger = ({ className = null, isToggled, onClick }) => (
           }}
         />
         <m.span
-          className="absolute right-0 top-[13px] block h-0.5 w-7 rounded-full bg-[#000] transition-colors duration-200"
+          className="absolute right-0 top-[13px] block h-0.5 w-7 rounded-full bg-white transition-colors duration-200"
           variants={{
             initial: {
               display: 'block',
@@ -46,7 +46,7 @@ const Burger = ({ className = null, isToggled, onClick }) => (
           }}
         />
         <m.span
-          className="absolute bottom-1 right-0 block h-0.5 w-7 rounded-full bg-[#000] transition-colors duration-200"
+          className="absolute bottom-1 right-0 block h-0.5 w-7 rounded-full bg-white transition-colors duration-200"
           variants={{
             initial: {
               bottom: 4,
@@ -61,7 +61,7 @@ const Burger = ({ className = null, isToggled, onClick }) => (
           }}
         />
         <m.span
-          className="absolute right-0 top-3.5 hidden h-0.5 w-7 rounded-full bg-[#000] transition-colors duration-200"
+          className="absolute right-0 top-3.5 hidden h-0.5 w-7 rounded-full bg-white transition-colors duration-200"
           variants={{
             initial: {
               rotate: '0deg',
@@ -76,7 +76,7 @@ const Burger = ({ className = null, isToggled, onClick }) => (
           }}
         />
         <m.span
-          className="absolute right-0 top-3.5 hidden h-0.5 w-7 rounded-full bg-[#000] transition-colors duration-200"
+          className="absolute right-0 top-3.5 hidden h-0.5 w-7 rounded-full bg-white transition-colors duration-200"
           variants={{
             initial: {
               rotate: '0deg',

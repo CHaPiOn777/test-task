@@ -1,4 +1,3 @@
-import Footer from 'components/shared/footer';
 import Header from 'components/shared/header';
 
 import 'styles/global.css';
@@ -9,7 +8,6 @@ const RootLayout = ({ children }) => (
     <body>
       <Header />
       <main>{children}</main>
-      <Footer />
     </body>
   </html>
 );
