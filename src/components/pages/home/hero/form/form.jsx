@@ -61,18 +61,18 @@ const Form = () => {
     <div className="flex flex-col h-24">
       <div className="form-border rounded-large p-px max-h-14 max-w-[466px] overflow-hidden">
         <form
-          className="form-bg flex rounded-large items-center justify-between max-h-[54px] lg:max-w-[464px] overflow-hidden"
+          className="form-bg flex rounded-large items-center justify-between max-h-[54px] overflow-hidden"
           noValidate
           onSubmit={handleSubmit(onSubmitHandler)}
         >
           <Input
-            className="form-text flex flex-1 text-[15px] bg-transparent pl-[23px] sm:pl-4 py-[18px] font-light leading-5 tracking-tight-4"
+            className="form-text flex flex-1 text-[15px] bg-transparent pl-[23px] py-[18px] font-light leading-5 tracking-tight-4"
             {...register('email')}
             placeholder="Your business email..."
             type="email"
             onChange={resetSubmitButton}
           />
-          <div className="py-1.5 pe-1 overflow-hidden rounded-large min-w-[147px] xl:min-w-max">
+          <div className="py-1.5 pe-1 overflow-hidden rounded-large min-w-[147px]">
             {loading ? (
               <InfoIcon theme="primary-blue" content="loading" className="p-2" animation />
             ) : (
@@ -92,7 +92,7 @@ const Form = () => {
           </div>
         </form>
       </div>
-      <p className="text-red pl-6 sm:pl-4 pt-3 font-medium leading-5 tracking-tight-4">
+      <p className="text-red pl-6 pt-3 font-medium leading-5 tracking-tight-4">
         {errors.email?.message}
       </p>
     </div>
